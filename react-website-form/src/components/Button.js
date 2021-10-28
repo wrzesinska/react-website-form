@@ -14,7 +14,7 @@ export const Button = ({
 }) => {
   const checkButtonStyles = STYLES.includes(buttonStyle)
     ? buttonStyle
-    : STYLE[0];
+    : STYLES[0];
 
   const checkButtonColor = COLOR.includes(buttonColor) ? buttonColor : COLOR[0];
   return (
