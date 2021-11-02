@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/pages/HomePage/Home";
 import Form from "./components/Form.js";
 import Footer from "./components/Footer.js";
-import Profile from "./components/pages/Profile.js";
+import Profile from "./components/pages/Profile/Profile.js";
 
 function App() {
   return (

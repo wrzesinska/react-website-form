@@ -13,7 +13,7 @@ export default function Content({ topLine, headLine, description }) {
               <div className='home__hero-text-wrapper'>
                 <div className='top-line'>{topLine}</div>
                 <h1 className='lighText'>{headLine}</h1>
-                <p className='home__hero-subtitle'>{description}</p>{" "}
+                <p className='home__hero-subtitle'>{description}</p>
               </div>
             </div>
           </div>
