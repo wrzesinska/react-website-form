@@ -6,7 +6,13 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 function Form() {
-  const { control, register, handleSubmit } = useForm();
+  const {
+    control,
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
   const [items, setItems] = useState([]);
   const history = useHistory();
 
@@ -29,14 +35,28 @@ function Form() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <h1 className='form-title'>Sign Up</h1>
-      <label>First Name</label>
-      <input {...register("firstName", { required: true, maxLength: 20 })} />
+      <label>First Name*</label>
+      <input
+        {...register("firstName", { required: true, maxLength: 30 })}
+        type='text'
+      />
+      <span className='error'>
+        {errors.firstName?.type === "required" && "First name is required"}
+      </span>
       <label>Last Name</label>
-      <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
-      <label>Email</label>
-      <input {...register("email")} />
+      <input {...register("lastName")} />
+      <label>Email*</label>
+      <input
+        {...register("email", {
+          required: true,
+        })}
+        type='email'
+      />
+      <span className='error'>
+        {errors.email?.type === "required" && "Email is required"}
+      </span>
       <label>Phone</label>
-      <input {...register("phone")} />
+      <input {...register("phone")} type='number' />
       <label>Birthday</label>
 
       <Controller
@@ -57,9 +77,9 @@ function Form() {
 
       <label>Avatar</label>
       <select {...register("src")}>
-        <option value='images/avatar-svgrepo-com.svg'>female</option>
-        <option value='male'>male</option>
-        <option value='other'>other</option>
+        <option value='images/avatar-female.svg'>Female</option>
+        <option value='images/avatar-male.svg'>Male</option>
+        <option value='images/avatar-monster.svg'>Other</option>
       </select>
 
       <input type='submit' />

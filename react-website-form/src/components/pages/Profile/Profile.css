@@ -27,6 +27,7 @@
     padding-right: 50px;
     padding-left: 50px;
     padding-top: 80px;
+    flex: 1 0 auto;
 }
 
 .section-container {

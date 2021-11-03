@@ -25,24 +25,22 @@ function Profile() {
   const birthdayFormatted = data.birthday.toString().split("T")[0];
 
   return (
-    <div>
-      <div className='profile-container'>
-        <h1 className='profile-title'>My Profile</h1>
-        <div className='section-container'>
-          <div className='profile-image'>
-            <img
-              src={data.src ? data.src : "images/avatar-svgrepo-com.svg"}
-              alt='avatar'
-            />
-          </div>
-          <div className='profile-content'>
-            <p>First Name: {data.firstName}</p>
-            <p>Last Name: {data.lastName}</p>
-            <p>Email: {data.email}</p>
-            <p>Phone: {data.phone}</p>
-            <p>Birthday: {birthdayFormatted}</p>
-            <p>About me: {data.about}</p>
-          </div>
+    <div className='profile-container'>
+      <h1 className='profile-title'>My Profile</h1>
+      <div className='section-container'>
+        <div className='profile-image'>
+          <img
+            src={data.src ? data.src : "images/avatar-svgrepo-com.svg"}
+            alt='avatar'
+          />
+        </div>
+        <div className='profile-content'>
+          <p>First Name: {data.firstName}</p>
+          <p>Last Name: {data.lastName}</p>
+          <p>Email: {data.email}</p>
+          <p>Phone: {data.phone}</p>
+          <p>Birthday: {birthdayFormatted}</p>
+          <p>About me: {data.about}</p>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import "./Content.css";
 
 export default function Content({ topLine, headLine, description }) {
   return (
-    <div>
+    <div style={{ flex: "1 0 auto" }}>
       <div className='home__hero-section darkBg'>
         <div className='container'>
           <div
