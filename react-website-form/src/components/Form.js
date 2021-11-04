@@ -1,9 +1,10 @@
-import { React, useEffect, useState } from "react";
+import { React, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import "./Form.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import profileService from "../services/profileService.js";
 
 function Form() {
   const {
@@ -13,22 +14,12 @@ function Form() {
     formState: { errors },
   } = useForm();
 
-  const [items, setItems] = useState([]);
+  const [registerFormState, setRegisterFormState] = useState({});
   const history = useHistory();
 
-  useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("items"));
-    if (items) {
-      setItems(items);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("items", JSON.stringify(items));
-  }, [items]);
-
-  const onSubmit = (item) => {
-    setItems([...items, item]);
+  const onSubmit = (formData) => {
+    setRegisterFormState(formData, registerFormState);
+    profileService.persist(formData);
     history.push("/profile");
   };
 

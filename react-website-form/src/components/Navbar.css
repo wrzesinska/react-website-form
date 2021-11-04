@@ -67,10 +67,6 @@
     height: 100%;
 }
 
-.fa-bars {
-    color: #fff;
-}
-
 .menu-icon {
     display: none;
 }
@@ -127,10 +123,6 @@
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-    }
-    .fa-times {
-        color: #fff;
-        font-size: 2rem;
     }
     .nav-btn {
         display: flex;
