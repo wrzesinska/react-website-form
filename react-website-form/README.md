@@ -6,7 +6,7 @@ To start this project:
 3. Go to directory react-website-form (cd react-website-form )
 4. Use 'yarn install' to install all dependencies 
 5. Use 'yarn start' to start project on http://localhost:3000
-6. If you have any questions, let me know joanna.wrzesinka88@gmail.com 
+6. If you have any questions, let me know. 
 
 
 ## Available Scripts
