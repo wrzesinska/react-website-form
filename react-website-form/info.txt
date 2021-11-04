@@ -1,0 +1,16 @@
+Hi, 
+My aasuption was creating simple app with possibilities to develop in in future to new components. 
+My app is storing data in localstorage, but logic for data flow is made in service so can be easy change 
+to retrieve data from some data base in future. 
+I prepared dynamic content for homepage so can be in future goes from backend and for 
+this moment is simple to changing it, without changing markup.  
+I have created React.js project. I have decided to use this technologies 
+because currently I'm very insteresting of this framework. I'm started learning react two months ago and 
+this project was very good oportunitty for me to check my knowledge about it in practice. 
+Earlier in my projects I have used vanilla js, web components and Vue.js. Thats why as alternative 
+I can propose create this app based on web components for example lit-html or Vue.js. 
+In readme you can find information how to start project. 
+I'm waiting for your feedback. 
+
+Thanks, 
+Joanna Wrzesińska 

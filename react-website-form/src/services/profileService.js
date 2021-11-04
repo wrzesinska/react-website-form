@@ -10,12 +10,6 @@ class ProfileService {
   retrive() {
     return JSON.parse(profileRegistry.retrive());
   }
-
-  birthdayConvert(date) {
-    const newDate = date;
-    console.log(newDate);
-    return newDate;
-  }
 }
 
 const profileService = new ProfileService();
