@@ -1,5 +1,5 @@
 Hi, 
-My aasuption was creating simple app with possibilities to develop in in future to new components. 
+My assuption was creating simple app with possibilities to develop it in future to  add new components. 
 My app is storing data in localstorage, but logic for data flow is made outside components so can be easy change 
 to retrieve data from some data base in future. 
 I prepared dynamic content for homepage so can be in future goes from backend and for 
